@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wanda"
+dynamic = ["version"]
+description = "A Simple and Effective Pruning Approach for Large Language Models"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Mingjie Sun", email = "mingjies@cs.cmu.edu"},
+    {name = "Zhuang Liu", email = "liuzhuangthu@gmail.com"},
+    {name = "Anna Bair"},
+    {name = "J. Zico Kolter"},
+]
+maintainers = [
+    {name = "Mingjie Sun", email = "mingjies@cs.cmu.edu"},
+    {name = "Zhuang Liu", email = "liuzhuangthu@gmail.com"},
+]
+keywords = ["machine-learning", "deep-learning", "pytorch", "transformers", "pruning", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=1.10.0",
+    "transformers>=4.28.0",
+    "datasets>=2.11.0",
+    "accelerate>=0.18.0",
+    "numpy",
+    "sentencepiece",
+    "wandb",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+]
+
+[project.scripts]
+wanda = "wanda.main:main"
+wanda-opt = "wanda.main_opt:main"
+
+[project.urls]
+Homepage = "https://github.com/locuslab/wanda"
+Documentation = "https://eric-mingjie.github.io/wanda/home.html"
+Repository = "https://github.com/locuslab/wanda"
+"Bug Tracker" = "https://github.com/locuslab/wanda/issues"
+
+[tool.setuptools_scm]
+write_to = "wanda/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wanda*"]
+exclude = ["tests*", "scripts*", "image_classifiers*", "lora_ft*", "dense_ft*"]
+
+[tool.setuptools.package-data]
+wanda = ["*.md", "*.txt"] 

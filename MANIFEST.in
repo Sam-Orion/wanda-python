@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+include INSTALL.md
+include .gitignore
+recursive-include wanda *.py
+recursive-include scripts *.sh
+recursive-include image_classifiers *.py
+recursive-include lora_ft *.py
+recursive-include dense_ft *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .git* 

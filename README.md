@@ -160,5 +160,4 @@ This project is released under the MIT license. Please see the [LICENSE](LICENSE
 ## Questions
 Feel free to discuss papers/code with us through issues/emails!
 
-mingjies at cs.cmu.edu  
-liuzhuangthu at gmail.com 
+shubhammisra936@gmail.com 

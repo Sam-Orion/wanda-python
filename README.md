@@ -82,7 +82,7 @@ python -m wanda.main \
 Below I have provided a quick overview of the arguments:  
 - `--model`: The identifier for the LLaMA model on the Hugging Face model hub.
 - `--cache_dir`: Directory for loading or storing LLM weights. The default is `llm_weights`.
-- `--prune_method`: We have implemented three pruning methods, namely [`magnitude`, `wanda`, `sparsegpt`].
+- `--prune_method`: I have implemented three pruning methods, namely [`magnitude`, `wanda`, `sparsegpt`].
 - `--sparsity_ratio`: Denotes the percentage of weights to be pruned.
 - `--sparsity_type`: Specifies the type of sparsity [`unstructured`, `2:4`, `4:8`].
 - `--use_variant`: Whether to use the Wanda variant, default is `False`. 
@@ -145,7 +145,7 @@ For inference speedup with structured sparsity, you can refer to this [blog post
 Last, for pruning image classifiers, see directory [image_classifiers](image_classifiers) for details.
 
 ## Acknowledgement
-This repository is build upon the [SparseGPT](https://github.com/IST-DASLab/sparsegpt) repository.
+This repository is build upon the [SparseGPT](https://github.com/IST-DASLab/sparsegpt) repository and on this [Paper](https://arxiv.org/abs/2306.11695) and [Project page](https://eric-mingjie.github.io/wanda/home.html)
 
 ## License
 This project is released under the GNU license. Please see the [LICENSE](LICENSE) file for more information.
